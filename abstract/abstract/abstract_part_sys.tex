@@ -1,0 +1,60 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{CJKutf8}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\begin{document}
+\section{システムについて}
+\subsection{システムの\begin{CJK}{UTF8}{mj}目的\end{CJK}}
+ \begin{CJK}{UTF8}{mj}画像認識\end{CJK}による\begin{CJK}{UTF8}{mj}電車\end{CJK}の\begin{CJK}{UTF8}{mj}識別\end{CJK}をWebアプリケーションとして\begin{CJK}{UTF8}{mj}実装\end{CJK}することで，\begin{CJK}{UTF8}{mj}気軽\end{CJK}に\begin{CJK}{UTF8}{mj}電車\end{CJK}の\begin{CJK}{UTF8}{mj}種類\end{CJK}を\begin{CJK}{UTF8}{mj}知\end{CJK}ることができるようにすること．\subsection{システムの\begin{CJK}{UTF8}{mj}概要\end{CJK}}
+\begin{CJK}{UTF8}{mj}本\end{CJK}システムは，ユーザに\begin{CJK}{UTF8}{mj}画像\end{CJK}ないしは\begin{CJK}{UTF8}{mj}動画\end{CJK}をブラウザ\begin{CJK}{UTF8}{mj}上\end{CJK}で\begin{CJK}{UTF8}{mj}入力\end{CJK}してもらい，それをサーバ\begin{CJK}{UTF8}{mj}上\end{CJK}で\begin{CJK}{UTF8}{mj}画像認識\end{CJK}を\begin{CJK}{UTF8}{mj}用\end{CJK}いて\begin{CJK}{UTF8}{mj}処理\end{CJK}し，\begin{CJK}{UTF8}{mj}結果\end{CJK}をブラウザで\begin{CJK}{UTF8}{mj}表示\end{CJK}するWebアプリケーションである．
+
+\subsection{システムの\begin{CJK}{UTF8}{mj}動作要件\end{CJK}}
+ \begin{CJK}{UTF8}{mj}本\end{CJK}システムでは，ノートパソコンにLinuxサーバのセットアップを\begin{CJK}{UTF8}{mj}行\end{CJK}い，サーバとして\begin{CJK}{UTF8}{mj}使用\end{CJK}した． ネットワークは，\begin{CJK}{UTF8}{mj}学内\end{CJK}の\begin{CJK}{UTF8}{mj}固定\end{CJK}IPを\begin{CJK}{UTF8}{mj}割\end{CJK}り\begin{CJK}{UTF8}{mj}当\end{CJK}ててもらい，\begin{CJK}{UTF8}{mj}学内\end{CJK}ネットワークを\begin{CJK}{UTF8}{mj}使用\end{CJK}した． サーバのスペックは\begin{CJK}{UTF8}{mj}以下\end{CJK}の\begin{CJK}{UTF8}{mj}通\end{CJK}りである．
+\textbackslash subsubsection\{サーバのスペック\}
+
+\begin{itemize}
+  \item OS: Ubuntu 22.04.3 LTS
+  \item メモリ: 4GB
+  \item CPU: Intel® Core(™) i7
+  \item GPU: NVIDIA GeForce GTX 470M
+  \item HDD: 80GB
+\end{itemize}
+
+\subsection{システムの\begin{CJK}{UTF8}{mj}開発環境\end{CJK}}
+ \begin{CJK}{UTF8}{mj}本\end{CJK}システムの\begin{CJK}{UTF8}{mj}開発\end{CJK}には，\begin{CJK}{UTF8}{mj}以下\end{CJK}の\begin{CJK}{UTF8}{mj}言語\end{CJK}やツールを\begin{CJK}{UTF8}{mj}使用\end{CJK}した．\subsubsection{\begin{CJK}{UTF8}{mj}使用言語\end{CJK}}
+\begin{itemize}
+  \item フロントエンド:
+  \begin{itemize}
+    \item html
+    \item JavaScript
+    \item css
+  \end{itemize}
+  \item バックエンド:
+  \begin{itemize}
+    \item JavaScript (Node.js)
+    \item Python
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{\begin{CJK}{UTF8}{mj}使用\end{CJK}ツール}
+\begin{itemize}
+  \item エディタ: VSCode
+  \item ブラウザ: Google Chrome 119
+\end{itemize}
+
+\subsection{システムの\begin{CJK}{UTF8}{mj}機能\end{CJK}}
+ \begin{CJK}{UTF8}{mj}本\end{CJK}システムは，\begin{CJK}{UTF8}{mj}以下\end{CJK}の3つの\begin{CJK}{UTF8}{mj}機能\end{CJK}を\begin{CJK}{UTF8}{mj}提供\end{CJK}する．\subsubsection{\begin{CJK}{UTF8}{mj}電車\end{CJK}の\begin{CJK}{UTF8}{mj}画像\end{CJK}の\begin{CJK}{UTF8}{mj}分類\end{CJK}}
+ この\begin{CJK}{UTF8}{mj}機能\end{CJK}では，ユーザがブラウザからアップロードした\begin{CJK}{UTF8}{mj}画像\end{CJK}に\begin{CJK}{UTF8}{mj}含\end{CJK}まれる\begin{CJK}{UTF8}{mj}電車\end{CJK}の\begin{CJK}{UTF8}{mj}種類\end{CJK}を\begin{CJK}{UTF8}{mj}分類\end{CJK}する． \begin{CJK}{UTF8}{mj}分類\end{CJK}の\begin{CJK}{UTF8}{mj}結果\end{CJK}，\begin{CJK}{UTF8}{mj}最\end{CJK}も\begin{CJK}{UTF8}{mj}可能性\end{CJK}が\begin{CJK}{UTF8}{mj}高\end{CJK}いものをHTMLページに\begin{CJK}{UTF8}{mj}出力\end{CJK}する．\begin{CJK}{UTF8}{mj}出力後\end{CJK}の\begin{CJK}{UTF8}{mj}画面\end{CJK}を\ref{}に\begin{CJK}{UTF8}{mj}示\end{CJK}す．\subsubsection{\begin{CJK}{UTF8}{mj}電車\end{CJK}の\begin{CJK}{UTF8}{mj}画像\end{CJK}の\begin{CJK}{UTF8}{mj}識別\end{CJK}}
+ この\begin{CJK}{UTF8}{mj}機能\end{CJK}では，ユーザがブラウザからアップロードした\begin{CJK}{UTF8}{mj}画像\end{CJK}に\begin{CJK}{UTF8}{mj}含\end{CJK}まれる\begin{CJK}{UTF8}{mj}電車\end{CJK}の\begin{CJK}{UTF8}{mj}位置\end{CJK}と\begin{CJK}{UTF8}{mj}種類\end{CJK}を\begin{CJK}{UTF8}{mj}識別\end{CJK}する．  \begin{CJK}{UTF8}{mj}識別\end{CJK}の\begin{CJK}{UTF8}{mj}結果\end{CJK}，バウンディングボックスが\begin{CJK}{UTF8}{mj}追加\end{CJK}された\begin{CJK}{UTF8}{mj}画像\end{CJK}をHTMLページに\begin{CJK}{UTF8}{mj}表示\end{CJK}する．\begin{CJK}{UTF8}{mj}出力後\end{CJK}の\begin{CJK}{UTF8}{mj}画面\end{CJK}を\ref{}に\begin{CJK}{UTF8}{mj}示\end{CJK}す．\subsubsection{\begin{CJK}{UTF8}{mj}電車\end{CJK}の\begin{CJK}{UTF8}{mj}動画\end{CJK}の\begin{CJK}{UTF8}{mj}識別\end{CJK}}
+ この\begin{CJK}{UTF8}{mj}機能\end{CJK}では，ユーザがブラウザからアップロードした\begin{CJK}{UTF8}{mj}動画\end{CJK}に\begin{CJK}{UTF8}{mj}含\end{CJK}まれる\begin{CJK}{UTF8}{mj}電車\end{CJK}の\begin{CJK}{UTF8}{mj}位置\end{CJK}と\begin{CJK}{UTF8}{mj}種類\end{CJK}を\begin{CJK}{UTF8}{mj}識別\end{CJK}する． \begin{CJK}{UTF8}{mj}識別\end{CJK}の\begin{CJK}{UTF8}{mj}結果\end{CJK}，バウンディングボックスが\begin{CJK}{UTF8}{mj}追加\end{CJK}された\begin{CJK}{UTF8}{mj}動画\end{CJK}をHTMLページに\begin{CJK}{UTF8}{mj}表示\end{CJK}する．\begin{CJK}{UTF8}{mj}出力後\end{CJK}の\begin{CJK}{UTF8}{mj}画面\end{CJK}を\ref{}に\begin{CJK}{UTF8}{mj}示\end{CJK}す．\begin{figure}[h]
+\texttt{URL}
+\end{figure}
+
+
+\end{document}
